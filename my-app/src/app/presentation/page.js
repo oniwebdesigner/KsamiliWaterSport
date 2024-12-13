@@ -1,5 +1,6 @@
 import React from 'react';
 import Presentation from '../presentation/presentation';
+import KsamilImage from '../../public/ksamili.jpg'; 
 
 export default function Page() {
   const title = "Sail, Paddle, Dive: Embrace the Water Sports Lifestyle.";
@@ -10,7 +11,12 @@ export default function Page() {
 
   return (
     <div>
-      <Presentation title={title} paragraphs={paragraphs} />
+      <Presentation 
+        title={title} 
+        paragraphs={paragraphs} 
+        imageSrc={KsamilImage}  
+        overlayText="Making Waves"  
+      />
     </div>
   );
 }

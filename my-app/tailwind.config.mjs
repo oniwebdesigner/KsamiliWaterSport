@@ -13,6 +13,7 @@ export default {
       },
       fontFamily: {
         embrace: ['"Embrace"', 'sans-serif'], 
+        sans: ['Volkolak Sans Display', 'sans-serif'],
       },
     },
   },
