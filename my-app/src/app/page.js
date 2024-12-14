@@ -8,7 +8,7 @@ export default function page() {
     <div>
       <HeroSection/>
       <Presentation/>
-      <About></About>
+      <About/>
     </div>
   )
 }
