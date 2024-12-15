@@ -17,7 +17,6 @@ export default function About() {
 
         {/* Main Content Section */}
         <article className="flex flex-col lg:flex-row items-center justify-between gap-6 mt-6">
-          {/* Image Section - Left */}
           <figure className="relative w-full lg:w-1/2 h-[500px] sm:h-[500px] lg:h-[600px] rounded-lg shadow-lg">
             <Image
               src={KsamilImage}
@@ -27,7 +26,6 @@ export default function About() {
             />
           </figure>
 
-          {/* Text Section - Right */}
           <section className="lg:w-1/2 text-white text-left flex flex-col justify-between">
             {/* Quote Section */}
             <blockquote className="text-9xl text-center sm:text-7xl md:text-8xl lg:p-5 italic text-yellow-400">

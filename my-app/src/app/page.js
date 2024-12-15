@@ -3,6 +3,7 @@ import HeroSection from './herosection/page'
 import Presentation from './presentation/page'
 import About from './about/About'
 import Activities from './activities/Activities'
+import Destinations from './destinations/Destinations'
 
 export default function page() {
   return (
@@ -11,6 +12,7 @@ export default function page() {
       <Presentation/>
       <About/>
       <Activities/>
+      <Destinations/>
     </>
   )
 }
