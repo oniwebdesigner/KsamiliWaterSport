@@ -1,5 +1,5 @@
 'use client';
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import { FaBars, FaAngleDown, FaShoppingCart } from "react-icons/fa";
 import Image from "next/image";
 import BurgerMenu from "./BurgerMenu"; // Import BurgerMenu
@@ -11,13 +11,15 @@ export default function Navbar() {
   const [activePage, setActivePage] = useState("Home"); // State for active page
   const [hoverTimeout, setHoverTimeout] = useState(null); // State for hover timeout
 
+  const menuRef = useRef(null); 
+
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    setIsMenuOpen(prevState => !prevState); 
   };
 
   const handleSetActivePage = (page) => {
     setActivePage(page);
-    setIsMenuOpen(false); // Close menu after selecting a page
+    setIsMenuOpen(false); 
   };
 
   const handleMouseEnter = () => {
@@ -35,8 +37,8 @@ export default function Navbar() {
   };
 
   return (
-    <header className="bg-black text-white">
-      <nav className="p-4">
+    <header className="bg-gray-900 text-white fixed top-0 left-0 w-full z-50">
+      <nav className="p-4" ref={menuRef}> 
         <section className="grid grid-cols-3 items-center">
           {/* Logo */}
           <figure style={{ position: "relative", width: "70px", height: "70px" }}>
@@ -124,7 +126,7 @@ export default function Navbar() {
           </ul>
 
           {/* Book Now Button for Desktop */}
-          <div className="flex items-center justify-end space-x-4">
+          <section className="flex items-center justify-end space-x-4">
             <a
               href="#book-now"
               className="bg-yellow-400 text-black px-4 py-2 rounded-md flex items-center space-x-2 hover:bg-yellow-500 transition-all text-sm md:text-base lg:text-lg"
@@ -132,7 +134,7 @@ export default function Navbar() {
               <span>Book Now</span>
               <FaShoppingCart />
             </a>
-          </div>
+          </section>
 
           {/* Button for Burger Menu */}
           <button
@@ -146,11 +148,9 @@ export default function Navbar() {
           {/* Burger Menu Component */}
           <BurgerMenu
             isMenuOpen={isMenuOpen}
-            toggleMenu={toggleMenu}
+            toggleMenu={setIsMenuOpen} // Pass the set function for managing the menu state
             activePage={activePage}
             handleSetActivePage={handleSetActivePage}
-            isDropdownOpen={isDropdownOpen}
-            toggleDropdownMobile={() => setIsDropdownOpen(!isDropdownOpen)}
           />
         </section>
       </nav>

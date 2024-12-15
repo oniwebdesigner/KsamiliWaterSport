@@ -1,5 +1,5 @@
 'use client';
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { FaTimes, FaAngleDown } from "react-icons/fa";
 
 export default function BurgerMenu({
@@ -8,41 +8,22 @@ export default function BurgerMenu({
   activePage,
   handleSetActivePage,
 }) {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); // State to control the dropdown's visibility
-  const menuRef = useRef(null); // Reference for the BurgerMenu component
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false); 
+  const burgerButtonRef = useRef(null); 
 
   // Function to toggle the dropdown visibility
   const handleDropdownToggle = () => {
     setIsDropdownOpen((prevState) => !prevState);
   };
 
-  // Closes the menu if the user clicks outside of it
-  useEffect(() => {
-    const handleOutsideClick = (event) => {
-      // Check if the click was outside the menu
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        toggleMenu(false); // Close the menu
-      }
-    };
-
-    // Add the event listener for clicks
-    document.addEventListener("mousedown", handleOutsideClick);
-    return () => {
-      // Clean up the event listener
-      document.removeEventListener("mousedown", handleOutsideClick);
-    };
-  }, [toggleMenu]);
-
   return (
-    <div
-      ref={menuRef}
-      className={`fixed top-0 right-0 h-full bg-black text-white w-64 z-30 transform transition-transform duration-500 ${
-        isMenuOpen ? "translate-x-0" : "translate-x-full"
-      }`}
+    <section
+      className={`fixed top-0 right-0 h-full bg-black text-white w-64 z-30 transform transition-transform duration-500 ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
     >
       {/* Button to close the menu */}
       <button
-        onClick={() => toggleMenu(false)}
+        ref={burgerButtonRef} 
+        onClick={() => toggleMenu(false)} 
         aria-label="Close menu"
         className="absolute top-4 right-4 text-2xl"
       >
@@ -112,6 +93,6 @@ export default function BurgerMenu({
           </a>
         </li>
       </ul>
-    </div>
+    </section>
   );
 }

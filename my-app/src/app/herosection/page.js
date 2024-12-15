@@ -1,6 +1,6 @@
 import Image from "next/image";
-import { FaWhatsapp } from 'react-icons/fa'; // Import WhatsApp icon
-import { FaShoppingCart } from 'react-icons/fa'; // Import Shopping Cart icon
+import { FaWhatsapp } from 'react-icons/fa'; 
+import { FaShoppingCart } from 'react-icons/fa'; 
 import backgroundImage from '../../public/ksamil.jpg';
 
 export default function HeroSection() {
