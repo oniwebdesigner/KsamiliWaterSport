@@ -6,16 +6,16 @@ export default function Destinations() {
   return (
     <section className="px-6 py-12 bg-gray-50">
       {/* Header Section */}
-      <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-10">
+      <section className="flex flex-col md:flex-row justify-between items-center gap-8 mb-10">
         {/* Title Section */}
-        <div className="ml-0 md:ml-10 text-center md:text-left">
+        <section className="ml-0 md:ml-10 text-center md:text-left">
           <h3 className="text-blue-600 text-lg md:text-2xl font-medium mb-3 md:mb-5">
             Places to Visit
           </h3>
           <h1 className="text-blue-900 text-3xl md:text-6xl font-extrabold">
             DESTINATIONS
           </h1>
-        </div>
+        </section>
 
         {/* Button Section */}
         <a
@@ -27,10 +27,10 @@ export default function Destinations() {
           <FaWhatsapp className="mr-2 text-lg md:text-xl" />
           Book Now
         </a>
-      </div>
+      </section>
 
       {/* Cards Section */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
         <DestinationCard
           image="https://images.pexels.com/photos/12266668/pexels-photo-12266668.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
           title="Ksamil Three Isles"
@@ -46,7 +46,7 @@ export default function Destinations() {
           title="Ali Pasha's Castle"
           description="Located at the mouth of the Vivari Channel in the Butrint National Park."
         />
-      </div>
+      </section>
     </section>
   );
 }

@@ -3,7 +3,7 @@ import { FaFacebook, FaInstagram, FaTiktok } from 'react-icons/fa';
 
 export default function SocialMedia() {
   return (
-    <div className="flex space-x-6 justify-center items-center">
+    <section className="flex space-x-6 justify-center items-center">
       {/* Facebook Icon */}
       <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
         <FaFacebook className="text-blue-600 text-3xl hover:text-blue-800 transition duration-300" />
@@ -18,6 +18,6 @@ export default function SocialMedia() {
       <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
         <FaTiktok className="text-black text-3xl hover:text-gray-800 transition duration-300" />
       </a>
-    </div>
+    </section>
   );
 }

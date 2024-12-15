@@ -13,7 +13,7 @@ export default function Footer() {
 
   return (
     <footer className="bg-gray-900 text-white py-12 relative">
-      <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+      <section className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
         {/* Logo and Description */}
         <figure className="flex flex-col items-center md:items-start text-center md:text-left">
           <Image
@@ -72,12 +72,12 @@ export default function Footer() {
           <h2 className="font-semibold mb-3 text-lg">Get In Touch</h2>
           <p className="text-gray-300">Phone: +35569 522 3077</p>
         </aside>
-      </div>
+      </section>
 
       {/* Social Media Icons */}
-      <div className="flex justify-center gap-6 mt-6 mb-10 sm:mb-6">
+      <section className="flex justify-center gap-6 mt-6 mb-10 sm:mb-6">
         <SocialMedia />
-      </div>
+      </section>
 
       {/* Footer Bottom Section */}
       <footer className="bg-yellow-500 text-center text-sm text-gray-900 py-4 mt-6 absolute bottom-0 w-full">

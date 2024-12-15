@@ -82,7 +82,7 @@ export default function Navbar() {
                 <ul className="absolute top-full left-0 mt-2 bg-white text-black border border-gray-700 p-4 rounded-md flex flex-col w-48 shadow-lg">
                   <li>
                     <a
-                      href="#"
+                      href="jet-ski-rental"
                       className="block hover:bg-gray-200 px-4 py-2 rounded-md"
                       onClick={() => handleSetActivePage("Jet Ski Rental")}
                     >
