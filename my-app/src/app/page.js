@@ -1,5 +1,5 @@
 import React from 'react'
-import HeroSection from './herosection/page'
+import HeroSection from './home/page'
 import Presentation from './presentation/page'
 import About from './about/About'
 import Activities from './activities/Activities'

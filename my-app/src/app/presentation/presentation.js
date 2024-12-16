@@ -4,14 +4,12 @@ import Image from 'next/image';
 export default function Presentation({ title, paragraphs, imageSrc, overlayText }) {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2 gap-6 p-6 sm:p-10">
-      {/* Title on the left */}
       <section className="flex flex-col justify-center lg:col-span-1">
         <h1 className="text-black text-2xl sm:text-3xl lg:text-5xl font-bold break-words font-embrace">
           {title}
         </h1>
       </section>
 
-      {/* Paragraphs on the right */}
       <section className="flex flex-col gap-6 lg:col-span-1">
         <p className="text-gray-800 text-base sm:text-lg lg:text-2xl">
           {paragraphs[0]}

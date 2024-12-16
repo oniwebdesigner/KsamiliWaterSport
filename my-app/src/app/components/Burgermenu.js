@@ -55,7 +55,7 @@ export default function BurgerMenu({
             <ul className="mt-2 bg-white text-black border border-gray-700 p-4 rounded-md space-y-2 shadow-lg">
               <li>
                 <a
-                  href="#"
+                  href="jet-ski-rental"
                   className="block hover:bg-gray-200 px-4 py-2 rounded-md"
                   onClick={() => handleSetActivePage("Jet Ski Rental")}
                 >
@@ -64,7 +64,7 @@ export default function BurgerMenu({
               </li>
               <li>
                 <a
-                  href="#"
+                  href="pedal-boat-rental"
                   className="block hover:bg-gray-200 px-4 py-2 rounded-md"
                   onClick={() => handleSetActivePage("Kayak & Pedal Boat Rental")}
                 >
@@ -76,7 +76,7 @@ export default function BurgerMenu({
         </li>
         <li>
           <a
-            href="#"
+            href="boat-tours"
             className="block hover:text-yellow-400"
             onClick={() => handleSetActivePage("Boat Tours")}
           >
