@@ -4,7 +4,7 @@ import Image from "next/image";
 import backgroundImage from '../../public/ksamil.jpg';
 import BookNowButton from "./BookNowButton";
 
-const TextSection = ({ mainTitle, subtitle, buttonLabel }) => {
+const TextSection = ({ mainTitle, subtitle, buttons }) => {
   return (
     <section className="relative w-full min-h-screen">
       {/* Hero Section with Background Image */}
@@ -29,13 +29,20 @@ const TextSection = ({ mainTitle, subtitle, buttonLabel }) => {
             {subtitle}
           </h1>
 
-          {/* Button Section centered */}
-          <section className="flex flex-col sm:flex-row gap-4 sm:gap-8 lg:gap-12 mt-5">
-            <BookNowButton label={buttonLabel} />
+          {/* Buttons Section */}
+          <section className="mt-8 flex flex-col gap-4 sm:flex-col md:flex-row md:gap-8">
+            {buttons?.map((button, index) => (
+              <BookNowButton
+                key={index}
+                label={button.label}
+                href={button.href}
+                className={button.className || ""}
+              />
+            ))}
           </section>
         </section>
       </article>
-     </section>
+    </section>
   );
 };
 

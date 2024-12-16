@@ -3,27 +3,30 @@ import Image from 'next/image';
 import TextSection from '../components/TextSection';
 import backgroundImage from '../../public/ksamil.jpg';
 import BookNowButton from '../components/BookNowButton';
+import Carousel from '../components/Carousel';
 
 export default function JetSkiRental({ buttonLabel }) {
   return (
     <section className="relative w-full min-h-screen flex flex-col justify-between">
       {/* Hero Section Component */}
       <TextSection
-        mainTitle="JET SKI"
-        subtitle="RENTAL KSAMIL"
-        buttonLabel="Book Now"
-      />
+      mainTitle="JET SKI"
+      subtitle="RENTAL KSAMIL"
+      buttons={[
+        { label: "Book Now", href: "/book-now" }
+      ]}
+    />
 
       {/* Content Section Below Hero Section */}
-      <h1 className="text-4xl sm:text-5xl md:text-6xl text-gray-800 text-center mt-10 font-extrabold">
+      <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-gray-800 text-center mt-6 md:mt-10 font-extrabold px-4">
         Rent a Jet Ski in Ksamil, Albania and enjoy the ride
       </h1>
-      <section className="relative z-10 grid grid-cols-1 sm:grid-cols-2 mt-16 px-4 mb-10 gap-10">
+      <section className="relative z-10 grid grid-cols-1 sm:grid-cols-2 mt-8 md:mt-16 px-4 md:px-10 lg:px-20 mb-10 gap-8 md:gap-10">
         <article>
-          <p className="text-gray-800">
+          <p className="text-gray-800 text-base sm:text-lg md:text-xl">
             Jet Ski Ksamil. One of the most exciting and well-liked activities we provide to discover Ksamil and the surrounding isles is jet skiing, which is ideal for people who enjoy speed and trying new things. It gives riders the chance to travel and train in complete safety while taking in incredible views and surroundings. Ksamili Water Sports is strategically located within a bend of the beach that always offers flat water conditions.
           </p>
-          <figure className="relative h-80 mt-5 shadow-[0_20px_60px_rgba(0,0,0,0.6)] rounded-lg overflow-hidden">
+          <figure className="relative h-64 sm:h-80 md:h-96 mt-5 shadow-[0_20px_60px_rgba(0,0,0,0.6)] rounded-lg overflow-hidden">
             <Image
               src={backgroundImage} 
               alt="Background Image"
@@ -35,7 +38,7 @@ export default function JetSkiRental({ buttonLabel }) {
           </figure>
         </article>
         <article>
-          <figure className="relative h-80 mb-5 shadow-[0_20px_60px_rgba(0,0,0,0.6)] rounded-lg overflow-hidden">
+          <figure className="relative h-64 sm:h-80 md:h-96 mb-5 shadow-[0_20px_60px_rgba(0,0,0,0.6)] rounded-lg overflow-hidden">
             <Image
               src={backgroundImage} 
               alt="Background Image"
@@ -45,17 +48,19 @@ export default function JetSkiRental({ buttonLabel }) {
               priority 
             />
           </figure>
-          <p className="text-gray-800">
+          <p className="text-gray-800 text-base sm:text-lg md:text-xl">
             Well-maintained jet skis are a pleasure to ride and a testament to responsible ownership. These sleek watercraft are great cared for, ensuring optimal performance and safety on the water. Safety features are regularly checked and maintained, providing peace of mind for both the rider and others enjoying the water. Ultimately, a well-maintained jet ski promises exhilarating adventures and memorable experiences on the waves. This is why our jet skis are always well maintained.
           </p>
         </article>
       </section>
 
       {/* What to Know Section */}
-      <section className="bg-gray-900 mb-5">
-        <h1 className="text-6xl text-center font-extrabold text-white py-6">What to Know Before Booking</h1>
-        <aside className="text-white max-w-4xl mx-auto px-4">
-          <ul className="list-disc space-y-4 text-xl mb-5 pl-8">
+      <section className="bg-gray-900 mb-5 px-4 md:px-10 lg:px-20">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl text-center font-extrabold text-white py-6">
+          What to Know Before Booking
+        </h1>
+        <aside className="text-white max-w-4xl mx-auto">
+          <ul className="list-disc space-y-4 text-sm sm:text-lg md:text-xl mb-5 pl-4 md:pl-8">
             <li>Be ready to get wet.</li>
             <li>Life jackets provided by us.</li>
             <li>Up to two people per jet ski. The driver doesn’t need to have a boat license.</li>
@@ -66,6 +71,21 @@ export default function JetSkiRental({ buttonLabel }) {
         
         {/* Book Now Button spanning full width */}
         <section className="w-full flex justify-center mb-5">
+          <BookNowButton label={buttonLabel} />
+        </section>
+      </section>
+      <section className="text-center px-4 md:px-10 lg:px-20">
+        <h1 className="text-3xl sm:text-4xl md:text-5xl text-gray-800 font-extrabold mb-5">
+          Who is it for?
+        </h1>
+        <p className="text-base sm:text-lg md:text-xl text-black mb-5">
+          Jet skiing in Ksamil is always fun, and accessible to everybody. You don’t have to be experienced in this water activity to rent a jet ski with us, at Ksamili Water Sports.
+        </p>
+        <p className="text-base sm:text-lg md:text-xl text-gray-800 mb-10">
+          Our jet skis can be rented by one person, or two people. To drive it, the person needs to be over 16. That is the only restriction.
+        </p>
+        <Carousel />
+        <section className="w-full flex justify-center mt-5 mb-5">
           <BookNowButton label={buttonLabel} />
         </section>
       </section>

@@ -32,7 +32,7 @@ const Carousel = () => {
       {/* Carousel Container */}
       <section
         ref={scrollContainerRef}
-        className="flex overflow-x-auto gap-4 scroll-smooth scrollbar-hide w-full"
+        className="flex overflow-x-hidden gap-4 scroll-smooth scrollbar-hide w-full"
         style={{ scrollBehavior: 'smooth' }}
       >
         {images.map((img, idx) => (

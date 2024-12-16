@@ -4,6 +4,7 @@ import { FaBars, FaAngleDown, FaShoppingCart } from "react-icons/fa";
 import Image from "next/image";
 import BurgerMenu from "./BurgerMenu"; // Import BurgerMenu
 import Logo from "../../public/kids4.png";
+import BookNowButton from "./BookNowButton";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false); // State for menu visibility
@@ -91,7 +92,7 @@ export default function Navbar() {
                   </li>
                   <li>
                     <a
-                      href="#"
+                      href="pedal-boat-rental"
                       className="block hover:bg-gray-200 px-4 py-2 rounded-md"
                       onClick={() => handleSetActivePage("Kayak & Pedal Boat Rental")}
                     >
@@ -127,13 +128,7 @@ export default function Navbar() {
 
           {/* Book Now Button for Desktop */}
           <section className="flex items-center justify-end space-x-4">
-            <a
-              href="#book-now"
-              className="bg-yellow-400 text-black px-4 py-2 rounded-md flex items-center space-x-2 hover:bg-yellow-500 transition-all text-sm md:text-base lg:text-lg"
-            >
-              <span>Book Now</span>
-              <FaShoppingCart />
-            </a>
+          <BookNowButton/>
           </section>
 
           {/* Button for Burger Menu */}
