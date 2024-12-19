@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function CustomButton({ label = "Book Now", href = "#", className = "" }) {
+export default function CustomButton({ label = "Book Now", href = "tour-destination", className = "" }) {
   return (
     <a
       href={href}

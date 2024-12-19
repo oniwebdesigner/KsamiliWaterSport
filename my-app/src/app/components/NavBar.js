@@ -60,7 +60,7 @@ export default function Navbar() {
           <ul className="hidden lg:flex items-center justify-center space-x-8 z-20">
             <li>
               <Link
-                href="/home"
+                href="/"
                 className={`hover:text-yellow-400 ${
                   activePage === "Home" ? "border-b-2 border-yellow-400" : "border-none"
                 }`}
@@ -121,7 +121,7 @@ export default function Navbar() {
                 className={`hover:text-yellow-400 ${
                   activePage === "Contact" ? "border-b-2 border-yellow-400" : "border-none"
                 }`}
-                onClick={() => handleSetActivePage("Contact")}
+                onClick={() => handleSetActivePage("contact")}
               >
                 Contact
               </Link>

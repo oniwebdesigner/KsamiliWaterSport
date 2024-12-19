@@ -1,5 +1,6 @@
 'use client';
 import { useState, useRef } from "react";
+import Link from "next/link";
 import { FaTimes, FaAngleDown } from "react-icons/fa";
 
 export default function BurgerMenu({
@@ -8,8 +9,8 @@ export default function BurgerMenu({
   activePage,
   handleSetActivePage,
 }) {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false); 
-  const burgerButtonRef = useRef(null); 
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const burgerButtonRef = useRef(null);
 
   // Function to toggle the dropdown visibility
   const handleDropdownToggle = () => {
@@ -18,12 +19,14 @@ export default function BurgerMenu({
 
   return (
     <section
-      className={`fixed top-0 right-0 h-full bg-black text-white w-64 z-30 transform transition-transform duration-500 ${isMenuOpen ? "translate-x-0" : "translate-x-full"}`}
+      className={`fixed top-0 right-0 h-full bg-black text-white w-64 z-30 transform transition-transform duration-500 ${
+        isMenuOpen ? "translate-x-0" : "translate-x-full"
+      }`}
     >
       {/* Button to close the menu */}
       <button
-        ref={burgerButtonRef} 
-        onClick={() => toggleMenu(false)} 
+        ref={burgerButtonRef}
+        onClick={() => toggleMenu(false)}
         aria-label="Close menu"
         className="absolute top-4 right-4 text-2xl"
       >
@@ -33,13 +36,13 @@ export default function BurgerMenu({
       {/* Menu items */}
       <ul className="mt-16 space-y-4 text-center">
         <li>
-          <a
-            href="#"
+          <Link
+            href="/"
             className="block hover:text-yellow-400"
             onClick={() => handleSetActivePage("Home")}
           >
             Home
-          </a>
+          </Link>
         </li>
         <li className="relative">
           {/* Dropdown button */}
@@ -54,43 +57,45 @@ export default function BurgerMenu({
           {isDropdownOpen && (
             <ul className="mt-2 bg-white text-black border border-gray-700 p-4 rounded-md space-y-2 shadow-lg">
               <li>
-                <a
-                  href="jet-ski-rental"
+                <Link
+                  href="/jet-ski-rental"
                   className="block hover:bg-gray-200 px-4 py-2 rounded-md"
                   onClick={() => handleSetActivePage("Jet Ski Rental")}
                 >
                   Jet Ski Rental
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="pedal-boat-rental"
+                <Link
+                  href="/pedal-boat-rental"
                   className="block hover:bg-gray-200 px-4 py-2 rounded-md"
-                  onClick={() => handleSetActivePage("Kayak & Pedal Boat Rental")}
+                  onClick={() =>
+                    handleSetActivePage("Kayak & Pedal Boat Rental")
+                  }
                 >
                   Kayak & Pedal Boat Rental
-                </a>
+                </Link>
               </li>
             </ul>
           )}
         </li>
         <li>
-          <a
-            href="boat-tours"
+          <Link
+            href="/boat-tours"
             className="block hover:text-yellow-400"
             onClick={() => handleSetActivePage("Boat Tours")}
           >
             Boat Tours
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#"
+          <Link
+            href="/contact"
             className="block hover:text-yellow-400"
             onClick={() => handleSetActivePage("Contact")}
           >
             Contact
-          </a>
+          </Link>
         </li>
       </ul>
     </section>

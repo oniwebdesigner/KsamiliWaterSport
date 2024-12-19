@@ -3,7 +3,7 @@ import React from "react";
 
 const Paragraphs = ({ title, items, showButton = false }) => {
   return (
-    <section className="bg-gray-800 px-4 md:px-10 lg:px-20">
+    <section className="bg-gray-800 px-4 md:px-10 lg:px-20 pb-5">
       <h1 className="text-3xl sm:text-4xl md:text-5xl text-center font-extrabold text-gray-100 py-6 mt-10">
         {title}
       </h1>

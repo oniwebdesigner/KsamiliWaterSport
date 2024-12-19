@@ -16,7 +16,7 @@ export default function SocialMedia() {
 
       {/* TikTok Icon */}
       <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer">
-        <FaTiktok className="text-black text-3xl hover:text-gray-800 transition duration-300" />
+        <FaTiktok className="text-white text-3xl hover:text-gray-800 transition duration-300" />
       </a>
     </section>
   );
