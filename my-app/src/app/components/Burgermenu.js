@@ -2,6 +2,7 @@
 import { useState, useRef } from "react";
 import Link from "next/link";
 import { FaTimes, FaAngleDown } from "react-icons/fa";
+import BookNowButton from '../components/BookNowButton'
 
 export default function BurgerMenu({
   isMenuOpen,
@@ -19,7 +20,7 @@ export default function BurgerMenu({
 
   return (
     <section
-      className={`fixed top-0 right-0 h-full bg-black text-white w-64 z-30 transform transition-transform duration-500 ${
+      className={`fixed top-0 right-0 h-full bg-gray-900 text-white w-64 z-30 transform transition-transform duration-500 ${
         isMenuOpen ? "translate-x-0" : "translate-x-full"
       }`}
     >
@@ -97,7 +98,11 @@ export default function BurgerMenu({
             Contact
           </Link>
         </li>
+        {/* <section className="relative items-center space-x-4">
+            <BookNowButton />
+          </section> */}
       </ul>
+     
     </section>
   );
 }

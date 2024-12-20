@@ -9,10 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "bower-npm-resolver": "^0.10.0",
+    "flatpickr": "^4.6.13",
     "leaflet": "^1.9.4",
     "next": "15.1.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-flatpickr": "^3.10.13",
     "react-icons": "^5.4.0"
   },
   "devDependencies": {
