@@ -4,7 +4,7 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 
 export default function MapComponent({ className = '' }) {
-    const mapRef = useRef(null); 
+    const mapRef = useRef(null);
 
     useEffect(() => {
         if (mapRef.current) {
@@ -18,11 +18,11 @@ export default function MapComponent({ className = '' }) {
             }).addTo(map);
 
             const customIcon = L.icon({
-                iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png', // Ikona default e Leaflet
+                iconUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-icon.png', // Default Leaflet icon
                 iconSize: [25, 41], 
                 iconAnchor: [12, 41],
                 popupAnchor: [1, -34], 
-                shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png', // Hija e ikonës
+                shadowUrl: 'https://unpkg.com/leaflet@1.9.4/dist/images/marker-shadow.png', // Icon shadow
                 shadowSize: [41, 41],
                 shadowAnchor: [12, 41],
             });
@@ -36,10 +36,10 @@ export default function MapComponent({ className = '' }) {
     }, []);
 
     return (
-        <section className={`rounded-2xl shadow-lg overflow-hidden ${className}`}>
+        <section className={`relative z-10 rounded-2xl shadow-lg overflow-hidden ${className}`}>
             <figure
                 ref={mapRef}
-                className="h-[400px] w-full border shadow-sm"
+                className="h-[400px] w-full border shadow-sm mt-[calc(60px+1rem)]" // Adjust margin-top based on navbar height
             ></figure>
         </section>
     );

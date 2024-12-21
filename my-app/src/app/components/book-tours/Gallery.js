@@ -37,7 +37,6 @@ export default function Gallery() {
 
   return (
     <div className="gallery-container p-4">
-      {/* Imazhi i madh */}
       <div className="main-image mb-4">
         <img
           src={selectedImage}
@@ -46,8 +45,6 @@ export default function Gallery() {
           onClick={openLightbox}
         />
       </div>
-
-      {/* Miniaturat */}
       <div className="thumbnails flex gap-2 overflow-x-auto justify-center">
         {images.map((image, index) => (
           <button
@@ -73,20 +70,17 @@ export default function Gallery() {
           onClick={closeLightbox}
         >
           <div className="relative">
-            {/* Imazhi në modal */}
             <img
               src={selectedImage}
               alt="Fullscreen"
               className="max-w-full max-h-screen rounded-lg animate-fade-in"
             />
-            {/* Butoni Previous */}
             <button
               onClick={handlePrev}
               className="absolute left-5 top-1/2 transform -translate-y-1/2 bg-black text-white hover:bg-gray-200 p-3 rounded-full shadow-lg"
             >
               &#8249;
             </button>
-            {/* Butoni Next */}
             <button
               onClick={handleNext}
               className="absolute right-5 top-1/2 transform -translate-y-1/2 bg-black text-white hover:bg-gray-200 p-3 rounded-full shadow-lg"

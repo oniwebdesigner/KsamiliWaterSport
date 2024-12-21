@@ -109,8 +109,9 @@ export default function Footer() {
         {/* Map Section */}
         <section className="flex flex-col items-center md:items-start text-center md:text-left">
   <section className="relative w-full h-[250px] overflow-hidden shadow-md">
-    
-    <MapComponent className="w-full h-full" />
+    <div className="w-full h-full -mt-20">
+    <MapComponent/>
+    </div>
 
     <div className="absolute inset-0 bg-gray-500 opacity-50 pointer-events-none"></div>
   </section>
