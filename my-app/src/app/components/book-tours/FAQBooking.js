@@ -2,39 +2,12 @@
 import React, { useState } from 'react';
 import { FaPlus, FaMinus } from 'react-icons/fa';
 
-export default function FAQ() {
+export default function FAQ({faqData = []}) {
   const [selectedQuestion, setSelectedQuestion] = useState(null);
 
   const toggleQuestion = (index) => {
     setSelectedQuestion((prev) => (prev === index ? null : index));
   };
-
-  const faqData = [
-    {
-      question: 'Where do we meet for our boat trip?',
-      answer: 'You will meet at the designated meeting point near the port at 8:30 am. We will provide further details via email.',
-    },
-    {
-      question: 'What time does the trip start?',
-      answer: 'The boat trip starts at 9:00 am. Please arrive at least 15 minutes before the departure time.',
-    },
-    {
-      question: 'How do I pay for the trip?',
-      answer: 'Payments can be made online through our secure payment gateway. You can also pay via cash on the day of the tour.',
-    },
-    {
-      question: 'What type of boats are used for the tour?',
-      answer: 'We use comfortable, high-speed boats equipped with life jackets for your safety. The boats have ample space for seating and luggage.',
-    },
-    {
-      question: 'What should we wear for the tour?',
-      answer: 'We recommend wearing comfortable clothes, sunscreen, and swimwear. Don\'t forget your camera for amazing photos!',
-    },
-    {
-      question: 'Can I bring my dog?',
-      answer: 'Unfortunately, pets are not allowed on the tour for safety and comfort reasons.',
-    },
-  ];
 
   return (
     <div className="rounded-lg max-w-3xl mx-auto mt-8">
@@ -42,7 +15,7 @@ export default function FAQ() {
       
       {/* FAQ Section */}
       <div className="space-y-4">
-        {faqData.map((faq, index) => (
+        {faqData.map((faqData, index) => (
           <div key={index} className="overflow-hidden transition-all duration-500 ease-in-out">
             <div
               onClick={() => toggleQuestion(index)}
@@ -51,7 +24,7 @@ export default function FAQ() {
               }`}
             >
               <div className="flex items-center justify-between">
-                <span className="text-lg font-semibold text-gray-800">{faq.question}</span>
+                <span className="text-lg font-semibold text-gray-800">{faqData.question}</span>
                 {selectedQuestion === index ? (
                   <FaMinus className="text-gray-600 text-sm" />
                 ) : (
@@ -63,7 +36,7 @@ export default function FAQ() {
                   selectedQuestion === index ? 'max-h-[500px] opacity-100' : ''
                 }`}
               >
-                <p className="text-gray-700 mt-2">{faq.answer}</p>
+                <p className="text-gray-700 mt-2">{faqData.answer}</p>
               </div>
             </div>
           </div>
