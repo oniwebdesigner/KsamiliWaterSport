@@ -14,9 +14,9 @@ const Paragraphs = ({ title, items, showButton = false }) => {
           ))}
         </ul>
         {showButton && (
-          <div className="flex justify-center mt-5 mb-5">
+          <section className="flex justify-center mt-5 mb-5">
             <BookNowButton />
-          </div>
+          </section>
         )}
       </aside>
     </section>

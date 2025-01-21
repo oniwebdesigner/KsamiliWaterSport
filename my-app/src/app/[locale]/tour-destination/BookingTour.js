@@ -59,12 +59,12 @@ const BookingTour = () => {
   };
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow-md">
-    <div className="flex text-center mb-4 gap-2 items-center">
+    <section className="p-6 bg-white rounded-lg shadow-md">
+    <section className="flex text-center mb-4 gap-2 items-center">
   <h2 className="text-sm font-bold text-gray-800">From</h2>
   <h2 className="text-lg font-bold text-gray-800 line-through">28 €</h2>
   <h2 className="text-2xl font-bold text-blue-700">20 €</h2>
-</div>
+</section>
 
 
       <h4 className="text-sm text-black mb-4 flex items-center">
@@ -73,12 +73,12 @@ const BookingTour = () => {
 
       <form className="space-y-6" onSubmit={handleSubmit}>
         {/* Adults */}
-        <div className="flex justify-between items-center bg-gray-100 p-3 rounded-md">
-          <div className="flex items-center space-x-2">
+        <section className="flex justify-between items-center bg-gray-100 p-3 rounded-md">
+          <section className="flex items-center space-x-2">
             <FaUser className="text-gray-700" />
             <span className="text-gray-800">Adults</span>
-          </div>
-          <div className="flex items-center space-x-2">
+          </section>
+          <section className="flex items-center space-x-2">
             <button
               type="button"
               onClick={() =>
@@ -96,19 +96,19 @@ const BookingTour = () => {
             >
               +
             </button>
-          </div>
-        </div>
+          </section>
+        </section>
         {validationErrors.adults && (
           <p className="text-red-500 text-sm">{validationErrors.adults}</p>
         )}
 
         {/* Children */}
-        <div className="flex justify-between items-center bg-gray-100 p-3 rounded-md">
-          <div className="flex items-center space-x-2">
+        <section className="flex justify-between items-center bg-gray-100 p-3 rounded-md">
+          <section className="flex items-center space-x-2">
             <FaChild className="text-gray-700" />
             <span className="text-gray-800">Children</span>
-          </div>
-          <div className="flex items-center space-x-2">
+          </section>
+          <section className="flex items-center space-x-2">
             <button
               type="button"
               onClick={() =>
@@ -126,14 +126,14 @@ const BookingTour = () => {
             >
               +
             </button>
-          </div>
-        </div>
+          </section>
+        </section>
         {validationErrors.children && (
           <p className="text-red-500 text-sm">{validationErrors.children}</p>
         )}
 
         {/* Date Range Picker */}
-        <div className="bg-gray-100 p-3 rounded-md gap-2">
+        <section className="bg-gray-100 p-3 rounded-md gap-2">
           <label className="text-gray-700 mb-2 flex items-center">
             <FaCalendarAlt className="text-gray-700 mr-2" />
             <span className="text-gray-700">Select Dates</span>
@@ -144,13 +144,13 @@ const BookingTour = () => {
             onChange={(dates) => handleChange("dates", dates)}
             className="w-full border border-gray-300 rounded-md p-2 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-        </div>
+        </section>
         {validationErrors.dates && (
           <p className="text-red-500 text-sm">{validationErrors.dates}</p>
         )}
 
         {/* Select Time */}
-        <div className="bg-gray-100 p-3 rounded-md">
+        <section className="bg-gray-100 p-3 rounded-md">
           <label className="text-gray-700 mb-2 flex items-center">
             <FaClock className="text-gray-700 mr-2" />
             <span className="text-gray-700">Select Time</span>
@@ -166,7 +166,7 @@ const BookingTour = () => {
             <option value="12:00 PM">12:00 PM</option>
             <option value="02:00 PM">02:00 PM</option>
           </select>
-        </div>
+        </section>
         {validationErrors.time && (
           <p className="text-red-500 text-sm">{validationErrors.time}</p>
         )}
@@ -182,7 +182,7 @@ const BookingTour = () => {
       {successMessage && (
         <p className="text-green-500 text-lg mt-4">{successMessage}</p>
       )}
-    </div>
+    </section>
   );
 };
 

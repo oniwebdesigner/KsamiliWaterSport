@@ -36,16 +36,16 @@ export default function Gallery() {
   };
 
   return (
-    <div className="gallery-container p-4">
-      <div className="main-image mb-4">
+    <section className="gallery-container p-4">
+      <section className="main-image mb-4">
         <img
           src={selectedImage}
           alt="Selected"
           className="w-full h-[400px] md:h-[500px] object-cover rounded-lg cursor-pointer"
           onClick={openLightbox}
         />
-      </div>
-      <div className="thumbnails flex gap-2 overflow-x-auto justify-center">
+      </section>
+      <section className="thumbnails flex gap-2 overflow-x-auto justify-center">
         {images.map((image, index) => (
           <button
             key={index}
@@ -61,15 +61,15 @@ export default function Gallery() {
             />
           </button>
         ))}
-      </div>
+      </section>
 
       {/* Lightbox */}
       {isLightboxOpen && (
-        <div
+        <section
           className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50 lightbox-backdrop"
           onClick={closeLightbox}
         >
-          <div className="relative">
+          <section className="relative">
             <img
               src={selectedImage}
               alt="Fullscreen"
@@ -87,9 +87,9 @@ export default function Gallery() {
             >
               &#8250;
             </button>
-          </div>
-        </div>
+          </section>
+        </section>
       )}
-    </div>
+    </section>
   );
 }

@@ -24,7 +24,7 @@ export default function Boat() {
           </aside>
 
           <figure className="sm:col-span-1 lg:col-span-2 grid grid-rows-2 gap-4 justify-center">
-            <div className="grid grid-cols-2 gap-4">
+            <section className="grid grid-cols-2 gap-4">
               {images.map((img, index) => (
                 <picture
                   key={index}
@@ -39,8 +39,8 @@ export default function Boat() {
                   />
                 </picture>
               ))}
-            </div>
-            <div className="grid grid-cols-2 gap-4">
+            </section>
+            <section className="grid grid-cols-2 gap-4">
               {images.map((img, index) => (
                 <picture
                   key={index}
@@ -55,7 +55,7 @@ export default function Boat() {
                   />
                 </picture>
               ))}
-            </div>
+            </section>
           </figure>
         </article>
 
@@ -75,7 +75,7 @@ export default function Boat() {
 
         <article className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <figure className="sm:col-span-1 lg:col-span-2 grid grid-rows-2 gap-4 justify-center">
-            <div className="grid grid-cols-2 gap-4">
+            <section className="grid grid-cols-2 gap-4">
               {images.map((img, index) => (
                 <picture
                   key={index}
@@ -90,8 +90,8 @@ export default function Boat() {
                   />
                 </picture>
               ))}
-            </div>
-            <div className="grid grid-cols-2 gap-4">
+            </section>
+            <section className="grid grid-cols-2 gap-4">
               {images.map((img, index) => (
                 <picture
                   key={index}
@@ -106,7 +106,7 @@ export default function Boat() {
                   />
                 </picture>
               ))}
-            </div>
+            </section>
           </figure>
 
           <aside className="sm:col-span-1 flex flex-col justify-center">

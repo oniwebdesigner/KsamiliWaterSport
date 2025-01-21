@@ -18,9 +18,9 @@ export default function CardsPage() {
         buttonText="View Details"
         buttonLink="/book-tour-3" 
       />
-      <div className="lg:col-span-1 bg-white p-4 lg:p-6 relative hidden sm:block">
+      <section className="lg:col-span-1 bg-white p-4 lg:p-6 relative hidden sm:block">
         <BookingForm />
-      </div>
+      </section>
       <CardContent
         imageSrc={backgroundImage}
         location="Shpella e Pellumbave Ksamil"
@@ -41,9 +41,9 @@ export default function CardsPage() {
         buttonText="View Details"
         buttonLink="book-tour-1" 
       />
-      <div className="lg:col-span-1 bg-white p-4 lg:p-6 relative lg:hidden">
+      <section className="lg:col-span-1 bg-white p-4 lg:p-6 relative lg:hidden">
         <BookingForm />
-      </div>
+      </section>
     </section>
   );
 }

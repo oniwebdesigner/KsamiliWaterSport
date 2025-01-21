@@ -73,29 +73,29 @@ export default function Page() {
 
   return (
     <section className="mt-32 px-8">
-      <div className="flex flex-col gap-4">
-        <div className="flex items-center justify-between">
+      <section className="flex flex-col gap-4">
+        <section className="flex items-center justify-between">
           <h1 className="text-4xl md:text-3xl font-bold text-black">
           30 minutes Jet Ski Rental in Ksamil
           </h1>
-          <div className="flex gap-3">
-            <div className="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md cursor-pointer hover:shadow-lg">
+          <section className="flex gap-3">
+            <section className="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md cursor-pointer hover:shadow-lg">
               <FaShareAlt className="text-blue-500 text-xl hover:text-blue-600" />
-            </div>
-            <div className="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md cursor-pointer hover:shadow-lg">
+            </section>
+            <section className="w-10 h-10 flex items-center justify-center bg-white rounded-full shadow-md cursor-pointer hover:shadow-lg">
               <FaHeart className="text-blue-500 text-xl hover:text-blue-600" />
-            </div>
-          </div>
-        </div>
+            </section>
+          </section>
+        </section>
 
         <p className="text-gray-800 text-md leading-relaxed flex items-center gap-2">
           <FaMapMarkerAlt className="text-blue-600 text-xl" />
           Ksamil
         </p>
-      </div>
+      </section>
 
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-        <div className="col-span-2">
+      <section className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-8">
+        <section className="col-span-2">
           <Gallery />
           
           <TourDetails
@@ -128,13 +128,13 @@ export default function Page() {
             <IncludedExcluded included={includedItems} excluded={excludedItems} />
           </section>
           
-          <div className="py-5"></div>
+          <section className="py-5"></section>
           <MapComponent />
           <FAQBooking faqData={faqData} />
          
-        </div>
+        </section>
         
-        <div className="col-span-1">
+        <section className="col-span-1">
           <h2 className="text-2xl font-semibold text-black mb-4">
             Information & Highlights
           </h2>
@@ -145,8 +145,8 @@ export default function Page() {
           
           <ContactInformation />
           <QuestionForm />
-        </div>
-      </div>
+        </section>
+      </section>
       <h1 className="text-2xl font-bold text-black py-5">You might also like</h1>
       <section className="flex flex-col md:flex-row gap-4">
         <Cards

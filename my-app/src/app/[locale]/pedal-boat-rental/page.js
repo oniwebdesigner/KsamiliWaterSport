@@ -30,7 +30,7 @@ export default function page() {
       {/* New Section */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10 px-4 md:px-10 lg:px-20 items-stretch mb-5">
         {/* Text Column */}
-        <div className="space-y-6">
+        <section className="space-y-6">
           <h2 className="text-2xl md:text-3xl font-semibold text-gray-800">
             Enjoy your holidays
           </h2>
@@ -46,7 +46,7 @@ export default function page() {
           <p className="text-base sm:text-lg md:text-xl text-gray-700">
             Among the various Water Sports you can practice on the beach, Kayaking does not require specific skills or athletic training like a jet ski, except for good swimming ability. Kayaking is a safe, pleasant, and healthy activity suitable for the whole family; an exciting and unforgettable experience in contact with nature.
           </p>
-        </div>
+        </section>
 
         {/* Image Column */}
         <figure className="relative h-full shadow-lg overflow-hidden">
@@ -75,8 +75,8 @@ export default function page() {
       {/* Grid Section */}
       <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-10 px-4 md:px-10 lg:px-20">
         {[...Array(6)].map((_, index) => (
-          <div key={index} className="flex flex-col items-center text-center relative mb-3">
-            <div className="relative w-full h-96 shadow-lg overflow-hidden">
+          <section key={index} className="flex flex-col items-center text-center relative mb-3">
+            <section className="relative w-full h-96 shadow-lg overflow-hidden">
               <Image
                 src={Ksamil}
                 alt={`Photo ${index + 1}`}
@@ -88,8 +88,8 @@ export default function page() {
               <h3 className="absolute bottom-10 left-3 text-white text-2xl font-semibold p-2 transform translate-x-1 translate-y-1 line-clamp-2">
                 {photoTitles[index]}
               </h3>
-            </div>
-          </div>
+            </section>
+          </section>
         ))}
       </section>
 
@@ -103,7 +103,7 @@ export default function page() {
         ]}
       />
   <section className="text-gray-700 flex justify-center items-center">
-  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
+  <section className="grid grid-cols-1 md:grid-cols-2 gap-8 text-center">
     <figure className="relative h-auto shadow-lg overflow-hidden">
       <Image
         src={Ksamil}
@@ -115,19 +115,19 @@ export default function page() {
       />
     </figure>
 
-    <div className="space-y-6 flex flex-col justify-center items-center px-4 md:px-10 text-start">
+    <section className="space-y-6 flex flex-col justify-center items-center px-4 md:px-10 text-start">
       <h2 className="text-3xl md:text-4xl font-extrabold mt-10 mb-10">
         Kayaks and Pedal Boats for Fun Exploration
       </h2>
       <p className="text-lg md:text-xl mb-10">
         Ksamil Water Sports offers for rental different types and sizes of kayaks, stand-up paddle boards, and pedal boats. Whether you're looking for a solo adventure or a family outing, we have options to suit all preferences and skill levels. Contact us now for more info and to book your exciting water adventure in Ksamil!
       </p>
-      <div className="w-full flex justify-start">
+      <section className="w-full flex justify-start">
         <BookNowButton 
         className='mb-10'/>
-      </div>
-    </div>
-  </div>
+      </section>
+    </section>
+  </section>
 </section>
 
 

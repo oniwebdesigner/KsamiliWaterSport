@@ -74,13 +74,13 @@ export default function Navbar() {
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
             >
-              <div
+              <section
                 className={`hover:text-yellow-400 ${
                   activePage === "Water Sports" ? "border-b-2 border-yellow-400" : "border-none"
                 } flex items-center`}
               >
                 Water Sports <FaAngleDown className="ml-2" />
-              </div>
+              </section>
               {isDropdownOpen && (
                 <ul className="absolute top-full left-0 mt-2 bg-white text-black border border-gray-700 p-4 rounded-md flex flex-col w-48 shadow-lg">
                   <li>

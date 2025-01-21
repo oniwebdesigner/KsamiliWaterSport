@@ -54,19 +54,19 @@ const BookingForm = () => {
   };
 
   return (
-    <div className="p-6 bg-white rounded-lg shadow-md">
+    <section className="p-6 bg-white rounded-lg shadow-md">
       <h4 className="text-sm text-black mb-4 flex items-center">
         <FaMapMarkerAlt className="text-blue-500 mr-2" /> Ksamil
       </h4>
 
       <form className="space-y-6" onSubmit={handleSubmit}>
         {/* Adults */}
-        <div className="flex justify-between items-center bg-gray-100 p-3 rounded-md">
-          <div className="flex items-center space-x-2">
+        <section className="flex justify-between items-center bg-gray-100 p-3 rounded-md">
+          <section className="flex items-center space-x-2">
             <FaUser className="text-gray-700" />
             <span className="text-gray-800">Adults</span>
-          </div>
-          <div className="flex items-center space-x-2">
+          </section>
+          <section className="flex items-center space-x-2">
             <button
               type="button"
               onClick={() =>
@@ -84,19 +84,19 @@ const BookingForm = () => {
             >
               +
             </button>
-          </div>
-        </div>
+          </section>
+        </section>
         {validationErrors.adults && (
           <p className="text-red-500 text-sm">{validationErrors.adults}</p>
         )}
 
         {/* Children */}
-        <div className="flex justify-between items-center bg-gray-100 p-3 rounded-md">
-          <div className="flex items-center space-x-2">
+        <section className="flex justify-between items-center bg-gray-100 p-3 rounded-md">
+          <section className="flex items-center space-x-2">
             <FaChild className="text-gray-700" />
             <span className="text-gray-800">Children</span>
-          </div>
-          <div className="flex items-center space-x-2">
+          </section>
+          <section className="flex items-center space-x-2">
             <button
               type="button"
               onClick={() =>
@@ -114,14 +114,14 @@ const BookingForm = () => {
             >
               +
             </button>
-          </div>
-        </div>
+          </section>
+        </section>
         {validationErrors.children && (
           <p className="text-red-500 text-sm">{validationErrors.children}</p>
         )}
 
         {/* Date Range Picker */}
-        <div className="bg-gray-100 p-3 rounded-md gap-2">
+        <section className="bg-gray-100 p-3 rounded-md gap-2">
           <label className="text-gray-700 mb-2 flex items-center">
             <FaCalendarAlt className="text-gray-700 mr-2" />
             <span className="text-gray-700">Select Dates</span>
@@ -132,7 +132,7 @@ const BookingForm = () => {
             onChange={(dates) => handleChange("dates", dates)}
             className="w-full border border-gray-300 rounded-md p-2 text-black focus:outline-none focus:ring-2 focus:ring-blue-500"
           />
-        </div>
+        </section>
         {validationErrors.dates && (
           <p className="text-red-500 text-sm">{validationErrors.dates}</p>
         )}
@@ -148,7 +148,7 @@ const BookingForm = () => {
       {successMessage && (
         <p className="text-green-500 text-lg mt-4">{successMessage}</p>
       )}
-    </div>
+    </section>
   );
 };
 

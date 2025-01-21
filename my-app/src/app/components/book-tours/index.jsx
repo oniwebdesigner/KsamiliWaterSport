@@ -1,0 +1,10 @@
+export {default as Cards} from './Cards';
+export {default as Description} from './Description';
+export {default as FAQBooking} from './FAQBooking';
+export {default as Gallery} from './Gallery';
+export {default as Highlights} from './Highlights';
+export {default as IncludedExcluded} from './IncludedExcluded';
+export {default as PopularFeatures} from './PopularFeatures';
+export {default as TourDetails} from './TourDetails';
+export {default as TourInfo} from './TourInfo'; 
+export {default as TravelItinerary} from './TravelItinerary';
